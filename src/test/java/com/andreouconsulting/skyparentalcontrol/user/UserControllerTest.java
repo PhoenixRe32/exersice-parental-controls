@@ -12,6 +12,7 @@ import static org.mockito.Mockito.mock;
 import com.andreouconsulting.skyparentalcontrol.control.ParentalControlService;
 import com.andreouconsulting.skyparentalcontrol.exceptions.TechnicalFailureException;
 import com.andreouconsulting.skyparentalcontrol.movie.exceptions.TitleNotFoundException;
+import com.andreouconsulting.skyparentalcontrol.user.exceptions.UserNotFoundException;
 import org.junit.Test;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,7 +24,7 @@ public class UserControllerTest {
     private final UserController controller = new UserController(userRepository, parentalControlService);
 
     @Test
-    public void shouldReturn200AndWhateverBooleanTheServiceReturnsAsItsBodyWhenThereIsNoError() throws TechnicalFailureException, TitleNotFoundException {
+    public void shouldReturn200AndWhateverBooleanTheServiceReturnsAsItsBodyWhenThereIsNoError() throws TechnicalFailureException, TitleNotFoundException, UserNotFoundException {
         doReturn(U).when(userRepository).getMaxMovieRatingPreference(any());
         doReturn(false).when(parentalControlService).isAllowedToWatchMovie(any(), any());
 
@@ -34,7 +35,7 @@ public class UserControllerTest {
     }
 
     @Test
-    public void shouldReturn500WhenThereIsATechnicalError() throws TechnicalFailureException, TitleNotFoundException {
+    public void shouldReturn500WhenThereIsATechnicalError() throws TechnicalFailureException, TitleNotFoundException, UserNotFoundException {
         doReturn(U).when(userRepository).getMaxMovieRatingPreference(any());
         doThrow(TechnicalFailureException.class).when(parentalControlService).isAllowedToWatchMovie(any(), any());
 
@@ -44,7 +45,7 @@ public class UserControllerTest {
     }
 
     @Test
-    public void shouldReturn404WhenTheTitleCannotBeFound() throws TechnicalFailureException, TitleNotFoundException {
+    public void shouldReturn404WhenTheTitleCannotBeFound() throws TechnicalFailureException, TitleNotFoundException, UserNotFoundException {
         doReturn(U).when(userRepository).getMaxMovieRatingPreference(any());
         doThrow(TitleNotFoundException.class).when(parentalControlService).isAllowedToWatchMovie(any(), any());
 
