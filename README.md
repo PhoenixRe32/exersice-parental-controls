@@ -1,4 +1,5 @@
 ### How to run
+This is written in Java 8.
 The project is a gradle project written using IntelliJ.
 Import it in any IDE you use and you should be able to run it using the IDE.
 Alternatively you can use the command line.
