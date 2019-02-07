@@ -5,7 +5,7 @@
       <configuration />
     </facet>
   </component>
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_9">
     <output-test url="file://$MODULE_DIR$/../../out/test/classes" />
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../src/test">
@@ -16,9 +16,10 @@
     <orderEntry type="module" module-name="com.andreouconsulting.skyparentalcontrol.main" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-web:2.1.2.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-test:2.1.2.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: pl.pragmatists:JUnitParams:1.1.1" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-json:2.1.2.RELEASE" level="project" />
-    <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter:2.1.2.RELEASE" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.springframework.boot:spring-boot-devtools:2.1.2.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter:2.1.2.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-tomcat:2.1.2.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.hibernate.validator:hibernate-validator:6.0.14.Final" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework:spring-webmvc:5.1.4.RELEASE" level="project" />
@@ -70,18 +71,6 @@
     <orderEntry type="library" name="Gradle: ch.qos.logback:logback-core:1.2.3" level="project" />
     <orderEntry type="library" name="Gradle: org.apache.logging.log4j:log4j-api:2.11.1" level="project" />
     <orderEntry type="library" name="Gradle: org.ow2.asm:asm:5.0.4" level="project" />
-    <orderEntry type="module-library" scope="TEST">
-      <library name="JUnit5.3">
-        <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-api/5.4.0-RC2/junit-jupiter-api-5.4.0-RC2.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/org/opentest4j/opentest4j/1.1.1/opentest4j-1.1.1.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-commons/1.4.0-RC2/junit-platform-commons-1.4.0-RC2.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
   </component>
   <component name="TestModuleProperties" production-module="com.andreouconsulting.skyparentalcontrol.main" />
 </module>
