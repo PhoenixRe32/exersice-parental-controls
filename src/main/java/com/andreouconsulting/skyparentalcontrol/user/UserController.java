@@ -9,6 +9,7 @@ import com.andreouconsulting.skyparentalcontrol.control.ParentalControlService;
 import com.andreouconsulting.skyparentalcontrol.exceptions.TechnicalFailureException;
 import com.andreouconsulting.skyparentalcontrol.movie.MovieRating;
 import com.andreouconsulting.skyparentalcontrol.movie.exceptions.TitleNotFoundException;
+import com.andreouconsulting.skyparentalcontrol.user.exceptions.UserNotFoundException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -31,14 +32,16 @@ public class UserController {
     public ResponseEntity isAllowedToWatchMovie(
             @PathVariable(value = "userId") UUID userId,
             @PathVariable(value = "movieId") UUID movieId) {
-        MovieRating movieRatingPreference = userRepository.getMaxMovieRatingPreference(userId);
         try {
+            MovieRating movieRatingPreference = userRepository.getMaxMovieRatingPreference(userId);
             boolean allowedToWatchMovie = parentalControlService.isAllowedToWatchMovie(movieRatingPreference, movieId);
             return ResponseEntity.ok(allowedToWatchMovie);
         } catch (TitleNotFoundException e) {
             return ResponseEntity.status(NOT_FOUND).body("The title is not available");
         } catch (TechnicalFailureException e) {
             return ResponseEntity.status(INTERNAL_SERVER_ERROR).body("The title cannot be streamed at the moment");
+        } catch (UserNotFoundException e) {
+            return ResponseEntity.status(NOT_FOUND).body("The user does not exist");
         }
     }
 }
