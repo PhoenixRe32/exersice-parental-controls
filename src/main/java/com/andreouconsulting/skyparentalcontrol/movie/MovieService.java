@@ -4,7 +4,6 @@ import com.andreouconsulting.skyparentalcontrol.exceptions.TechnicalFailureExcep
 import com.andreouconsulting.skyparentalcontrol.movie.exceptions.TitleNotFoundException;
 import org.springframework.stereotype.Component;
 
-@Component
 public interface MovieService {
     String getParentalControlLevel(String movieId) throws TitleNotFoundException, TechnicalFailureException;
 }
