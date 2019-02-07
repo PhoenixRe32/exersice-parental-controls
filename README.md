@@ -11,6 +11,12 @@ The project should start on port 8080.
 ### How to use
 Use a browser, or Postman, or the terminal and make the following **GET** request:
 http://localhost:8080/v0/user/ce38a0b4-862f-456e-a08a-91f08181eb00/watch/c1ccf910-2ecc-4018-b476-5e8957b5ba00/permission
+The request takes two ids.
+The first is the user uuid and the second is the movie uuid.  
+I have provided some values below that you can use.
+They are the hardcoded values for the mock implementation I wrote for the
+purpose of this exercise.
+
 ```
 UserId                                  Rating Preference
 ce38a0b4-862f-456e-a08a-91f08181eb00    U
