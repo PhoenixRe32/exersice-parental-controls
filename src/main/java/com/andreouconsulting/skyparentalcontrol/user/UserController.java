@@ -4,6 +4,7 @@ import java.util.UUID;
 
 import com.andreouconsulting.skyparentalcontrol.control.ParentalControlService;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,7 +21,7 @@ public class UserController {
         this.parentalControlService = parentalControlService;
     }
 
-    @RequestMapping(path = "/watch/{movieId}/permission")
+    @GetMapping(path = "/watch/{movieId}/permission")
     public ResponseEntity isAllowedToWatchMovie(
             @PathVariable(value = "userId") UUID cargoId,
             @PathVariable(value = "movieId") UUID movieId) {
