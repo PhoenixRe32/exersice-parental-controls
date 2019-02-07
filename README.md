@@ -2,6 +2,7 @@
 The project is a gradle project written using IntelliJ.
 Import it in any IDE you use and you should be able to run it using the IDE.
 Alternatively you can use the command line.
+
 * Navigate to the root folder `SkyParentalControl`
 * Run `./gradlew bootRun`
 
