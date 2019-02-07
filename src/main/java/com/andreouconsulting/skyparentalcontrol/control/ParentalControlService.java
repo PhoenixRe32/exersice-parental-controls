@@ -9,7 +9,7 @@ import com.andreouconsulting.skyparentalcontrol.movie.exceptions.TitleNotFoundEx
 import org.springframework.stereotype.Service;
 
 @Service
-public final class ParentalControlService {
+public class ParentalControlService {
 
     private final MovieService movieService;
 
