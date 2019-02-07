@@ -6,6 +6,7 @@ Alternatively you can use the command line.
 
 * Navigate to the root folder `SkyParentalControl`
 * Run `./gradlew bootRun`
+* To run the tests run `./gradlew test`
 
 The project should start on port 8080.
 
